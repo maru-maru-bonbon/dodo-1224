@@ -1,0 +1,25 @@
+.footer-link{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer-content-head{
+  margin-left: 25px;
+  font-size: 25px;
+  margin: 0 0 10px 0;
+}
+
+.footer {
+  width: 100vw;
+  height: 30vh;
+  padding: 5vh 0;
+  color: white;
+  background-color: rgb(195, 215, 255);
+  text-align: center;
+  line-height: 27px;
+}

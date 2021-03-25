@@ -1,4 +1,4 @@
-class CreatePlans < ActiveRecord::Migration[6.0]
+class Plans < ActiveRecord::Migration[6.0]
   def change
     create_table :plans do |t|
       t.string :name,         null: false
@@ -7,7 +7,8 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.integer :category_id, null: false
       t.integer :term_id,     null: false
       t.integer :price_id,    null: false  
-  
+      t.references :user,     foreign_key: true
+
     end
   end
 end

@@ -58,3 +58,8 @@ gem 'pry-rails'
 group :development do
   gem 'rubocop', require: false
 end
+
+gem "devise"
+
+gem 'rails-i18n'
+

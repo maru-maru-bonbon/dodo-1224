@@ -7,4 +7,11 @@ class User < ApplicationRecord
         has_many :plans
         has_many :participants
         has_many :participant_users, through: :participants, source: :plan
+
+        PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
+        validates_format_of :password, with: PASSWORD_REGEX, message: "は半角英数字で入力して下さい"
+        
+        validates :email, uniqueness: { case_sensitive: false }         
+        validates :nickname, presence: true
+     
 end

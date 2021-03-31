@@ -5,6 +5,9 @@ class PlansController < ApplicationController
     @plans =Plan.all.order("created_at DESC")
   end
 
+  def new
+    @plan = Plan.new
+  end
 
 
 

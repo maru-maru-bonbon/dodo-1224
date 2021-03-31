@@ -9,7 +9,15 @@ class PlansController < ApplicationController
     @plan = Plan.new
   end
 
-
+  def create
+    @plan = Plan.new(plan_params)
+    if @plan.save
+      @plan.plan_users.create(user_id: current_user.id)
+      redirect_to root_path
+    else 
+      render :new
+    end
+  end
 
 
 

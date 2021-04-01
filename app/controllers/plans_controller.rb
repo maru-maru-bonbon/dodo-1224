@@ -13,7 +13,7 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
-      @plan.plan_users.create(user_id: current_user.id)
+      @plan.participants.create(user_id: current_user.id)
       redirect_to root_path
     else 
       render :new
@@ -27,7 +27,7 @@ class PlansController < ApplicationController
   private
 
   def plan_params
-    params.require(:message).permit(
+    params.require(:plan).permit(
       :image,
       :name,
       :description,

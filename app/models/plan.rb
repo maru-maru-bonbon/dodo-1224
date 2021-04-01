@@ -6,7 +6,6 @@ class Plan < ApplicationRecord
   has_many :participants
   has_many :participant_users, through: :participants, source: :user
   belongs_to :user
-  accepts_nested_attributes_for :plan_users, allow_destroy: true
 
   with_options presence: true do
     validates :image, unless: :was_attached?

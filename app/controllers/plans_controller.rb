@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   before_action :move_to_index, except:  [:index, :show]
+  before_action :set_plan,only: [:show]
 
 
   def index
@@ -20,7 +21,8 @@ class PlansController < ApplicationController
     end
   end
 
-
+  def show
+  end
 
 
 
@@ -43,6 +45,10 @@ class PlansController < ApplicationController
     unless user_signed_in?
       redirect_to action: :index     
     end
+  end
+
+  def set_plan
+    @plan = Plan.find(params[:id])
   end
  
 end

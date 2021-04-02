@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
   before_action :move_to_index, except:  [:index, :show]
-  before_action :set_plan,only: [:show, :edit, :update]
+  before_action :set_plan,only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -35,6 +35,14 @@ class PlansController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @plan.destroy 
+      redirect_to root_path
+    else
+      render :show
     end
   end
 

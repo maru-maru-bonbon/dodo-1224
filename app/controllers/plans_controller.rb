@@ -1,6 +1,6 @@
 class PlansController < ApplicationController
   before_action :move_to_index, except:  [:index, :show]
-  before_action :set_plan,only: [:show]
+  before_action :set_plan,only: [:show, :edit, :update]
 
 
   def index
@@ -24,6 +24,19 @@ class PlansController < ApplicationController
   def show
   end
 
+  def edit
+    if current_user.id != @plan.user.id
+      redirect_to root_path
+    end
+  end
+
+  def update
+    if @plan.update(plan_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
 
 
   private

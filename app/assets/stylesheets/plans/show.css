@@ -7,7 +7,7 @@
 .plan-box{
   border: 20px black solid;
   border-radius: 10px;
-  width: 800px;
+  width: 820px;
   padding: 40px 100px 40px;
 }
 
@@ -72,7 +72,7 @@
   top: 10px;
 }
 
-.three-btn{
+.two-btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +111,7 @@
 }
 
 .plan-participate{
-  height: 30px;
+  height: 20px;
   width: 110px;
   position: relative;
   font-size: 0.8em;
@@ -122,8 +122,8 @@
   box-shadow: inset #00b5ad 0 0 0 0;
   transition: 0.3s;
   cursor: pointer;
-  margin-left: 40px;
-  padding: 30px 80px 10px;
+  margin:40px 0 0 50px;
+  padding: 20px 80px 20px;
 }
 
 .btn:hover{
@@ -136,7 +136,8 @@
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  margin: 50px 0 100px 0;
+  height: 50px;
+  margin: 100px 0 50px 0;
   
 }
 
@@ -146,6 +147,8 @@
   margin: 0 30px 0;
 }
 
-.detail-value{
-  width: 100px;
+.participate-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

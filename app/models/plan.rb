@@ -4,7 +4,7 @@ class Plan < ApplicationRecord
   belongs_to_active_hash :term
   belongs_to_active_hash :price
   has_many :participants
-  has_many :participant_users, through: :participants, source: :user
+  has_many :participant_users, through: :participants, source: :user, dependent: :destroy
   belongs_to :user
 
   with_options presence: true do

@@ -4,7 +4,7 @@
   padding: 3vh 5vw;
   padding-bottom: 10vh;
   box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(211, 239, 255);
   display: flex;
   border-bottom: rgb(43, 42, 42) 1px solid;
 }
@@ -41,7 +41,7 @@
   margin: 0 0 20px 0;
   font-size: 0.8rem;
   user-select: none;
-  border: 5px #d7f0f7 solid;
+  border: 5px #6d6c6c solid;
   border-radius: 100px;
   transition: 0.4s ease;
   width: auto;

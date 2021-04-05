@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+<div class="main">
+
+  <%# プラン一覧 %>
+      <% @plans.each do |plan| %>
+        <%= link_to plan_path(plan.id), method: :get do %>
+      <div class="content">
+        <div class='plan-img-content'>
+          <%= image_tag plan.image, class: "plan-img" %>
+        </div>
+        <div class='plan-info'>
+          <h3 class='plan-name'>
+            <%= plan.name %>
+          </h3>
+          <div class='plan-price'>
+            <span><%= plan.price.name %>円</span>
+            <div class='good-btn'>
+              <%= image_tag "goodmark.png", class:"good-icon" %>
+              <span class='good-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+  <%#/ プラン一覧 %>
+
+</div>
+<div class='planning-btn'>
+  <span class='planning-btn-text'>計画を立てる</span>
+  <%= link_to new_plan_path do %>
+    <%= image_tag 'pen.png' , size: '185x50' ,class: "planning-btn-icon" %>
+  <% end %>
+</div>
+<%= render "shared/footer" %>
+
+
+

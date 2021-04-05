@@ -21,4 +21,13 @@ class Plan < ApplicationRecord
   def was_attached?
     self.image.attached?
   end
+
+  def self.search(search)
+    if search != ""
+      Plan.where('name LIKE(?)', "%#{search}%")
+    else
+      Plan.all
+    end
+  end
+
 end

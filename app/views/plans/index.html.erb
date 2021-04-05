@@ -10,7 +10,7 @@
         </div>
         <div class='plan-info'>
           <h3 class='plan-name'>
-            <%= plan.name %>
+            <%= truncate(plan.name, length: 10) %>
           </h3>
           <div class='plan-price'>
             <span><%= plan.price.name %>円</span>

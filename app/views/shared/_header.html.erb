@@ -5,10 +5,10 @@
     </div>
     <nav class="header-nav">
       <div class="header-nav-item">
-        <form class="form2">
-          <input type="search" class="form2-input" placeholder="プランを検索" />
-          <button type="submit" class="form2-button"><i class="fa fa-search"></i></button>
-        </form>
+        <%= form_with(url: search_plans_path, local: true, method: :get, class: "form2") do |form| %>
+          <%= form.text_field :keyword, placeholder: "プランを検索", class: "form2-input" %>
+          <%= form.submit "検索", class: "form2-button" %>
+        <% end %>
       </div>
     </nav>
   </div>

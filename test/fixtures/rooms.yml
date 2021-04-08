@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  room_name: MyString
+  plan: one
+  member: 1
+
+two:
+  room_name: MyString
+  plan: two
+  member: 1

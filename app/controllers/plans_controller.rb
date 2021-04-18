@@ -60,7 +60,8 @@ class PlansController < ApplicationController
       :item,
       :category_id,
       :term_id,
-      :price_id).
+      :price_id,
+      :member_limit).
       merge(user_id: current_user.id)
   end
 

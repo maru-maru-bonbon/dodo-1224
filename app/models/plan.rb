@@ -3,6 +3,7 @@ class Plan < ApplicationRecord
   belongs_to_active_hash :category
   belongs_to_active_hash :term
   belongs_to_active_hash :price
+  has_one :room
   has_many :participants
   has_many :participant_users, through: :participants, source: :user, dependent: :destroy
   belongs_to :user
